@@ -1,15 +1,13 @@
-ARCHS = arm64e
 TARGET := iphone:clang:latest:15.0
-THEOS_PACKAGE_SCHEME = roothide
-INSTALL_TARGET_PROCESSES = SpringBoard
+ARCHS = arm64e
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = OCBoost
-OCBoost_FILES = Tweak.x
-OCBoost_CFLAGS = -fobjc-arc
-OCBoost_FRAMEWORKS = UIKit QuartzCore Foundation
+BUNDLE_NAME = OCBoostPrefs
+OCBoostPrefs_FILES = OCBRootListController.m
+OCBoostPrefs_FRAMEWORKS = UIKit
+OCBoostPrefs_INSTALL_PATH = /Library/PreferenceBundles
+OCBoostPrefs_CFLAGS = -fobjc-arc
+OCBoostPrefs_LDFLAGS = -undefined dynamic_lookup
 
-include $(THEOS_MAKE_PATH)/tweak.mk
-SUBPROJECTS += ocboostprefs
-include $(THEOS_MAKE_PATH)/aggregate.mk
+include $(THEOS_MAKE_PATH)/bundle.mk
