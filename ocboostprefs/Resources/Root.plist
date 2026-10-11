@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>title</key><string>OCBoost</string>
+<key>items</key><array>
+
+<dict><key>cell</key><string>PSGroupCell</string></dict>
+<dict>
+  <key>cell</key><string>PSSwitchCell</string>
+  <key>label</key><string>Bật OCBoost</string>
+  <key>key</key><string>enabled</string>
+  <key>default</key><false/>
+  <key>defaults</key><string>com.namkhang.ocboost</string>
+  <key>PostNotification</key><string>com.namkhang.ocboost/prefschanged</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>label</key><string>Trạng thái</string>
+</dict>
+<dict>
+  <key>cell</key><string>PSTitleValueCell</string>
+  <key>label</key><string>Nhiệt độ máy</string>
+  <key>get</key><string>thermalText:</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>label</key><string>Chế độ hiệu năng</string>
+  <key>footerText</key><string>Mát mẻ: giới hạn 60 FPS cho máy bớt nóng. Cân bằng: mặc định iOS. Tối đa: ưu tiên luồng chính + animation nhanh. Thông minh: tự đổi theo nhiệt độ máy.</string>
+</dict>
+<dict>
+  <key>cell</key><string>PSSegmentCell</string>
+  <key>key</key><string>mode</string>
+  <key>default</key><string>balanced</string>
+  <key>defaults</key><string>com.namkhang.ocboost</string>
+  <key>validTitles</key><array><string>Mát mẻ</string><string>Cân bằng</string><string>Tối đa</string><string>Thông minh</string></array>
+  <key>validValues</key><array><string>cool</string><string>balanced</string><string>max</string><string>smart</string></array>
+  <key>PostNotification</key><string>com.namkhang.ocboost/prefschanged</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>label</key><string>Tốc độ animation (chế độ Tối đa)</string>
+  <key>footerText</key><string>Kéo từ 1.0x đến 2.0x. Cao quá thì giao diện sẽ nhanh đến mức khó nhìn.</string>
+</dict>
+<dict>
+  <key>cell</key><string>PSSliderCell</string>
+  <key>key</key><string>animspeed</string>
+  <key>default</key><real>1.3</real>
+  <key>min</key><real>1.0</real>
+  <key>max</key><real>2.0</real>
+  <key>showValue</key><true/>
+  <key>defaults</key><string>com.namkhang.ocboost</string>
+  <key>PostNotification</key><string>com.namkhang.ocboost/prefschanged</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>label</key><string>Mạng</string>
+  <key>footerText</key><string>Tăng lên 24 kết nối song song, bật pipelining, tăng bộ nhớ đệm và chờ mạng thay vì báo lỗi ngay. Giúp tải nhiều ảnh/nội dung nhỏ nhanh hơn, không tăng tốc độ gói cước. Cần mở lại app.</string>
+</dict>
+<dict>
+  <key>cell</key><string>PSSwitchCell</string>
+  <key>label</key><string>Mạng siêu tốc</string>
+  <key>key</key><string>netboost</string>
+  <key>default</key><false/>
+  <key>defaults</key><string>com.namkhang.ocboost</string>
+  <key>PostNotification</key><string>com.namkhang.ocboost/prefschanged</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>label</key><string>Nâng cao</string>
+  <key>footerText</key><string>Cho app thấy máy không bật Tiết kiệm pin để app không tự giảm chất lượng. Hệ thống iOS vẫn có thể giảm hiệu năng khi bạn bật Tiết kiệm pin.</string>
+</dict>
+<dict>
+  <key>cell</key><string>PSSwitchCell</string>
+  <key>label</key><string>Không giảm chất lượng khi Tiết kiệm pin</string>
+  <key>key</key><string>nolpm</string>
+  <key>default</key><false/>
+  <key>defaults</key><string>com.namkhang.ocboost</string>
+  <key>PostNotification</key><string>com.namkhang.ocboost/prefschanged</string>
+</dict>
+
+<dict>
+  <key>cell</key><string>PSGroupCell</string>
+  <key>footerText</key><string>Dev: Nguyễn Minh, Nam Khang</string>
+</dict>
+
+</array></dict></plist>

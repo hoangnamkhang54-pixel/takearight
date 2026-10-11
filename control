@@ -1,0 +1,9 @@
+Package: com.namkhang.ocboost
+Name: OCBoost
+Depends: mobilesubstrate, preferenceloader
+Version: 0.1.0
+Architecture: iphoneos-arm64e
+Description: OCBoost - toi uu hieu nang, mang sieu toc, giao dien dep. Dev: Nguyen Minh, Nam Khang
+Maintainer: Nam Khang
+Author: Nam Khang
+Section: Tweaks
